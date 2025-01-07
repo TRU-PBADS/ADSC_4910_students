@@ -29,7 +29,7 @@ Office hour: Wed 11:30 AM-12:30 PM at OM 1232
 |-------------|-----------|------------|----------------------------------------------------|
 | 1           | Tuesday   | Jan 7, 2025 | Course Introduction: Overview, Objectives, and Expectations |
 | 1           | Wednesday | Jan 8, 2025 | Group Formation and Introduction to Team-Based Learning  |
-| 2           | Tuesday   | Jan 14, 2025 | Group Project Preparation |
+| 2           | Tuesday   | Jan 14, 2025 | Group Project Preparation (No class) |
 | 2           | Wednesday | Jan 15, 2025 | Group 1 Presentation: Train/Test Split and Cross-Validation Techniques |
 | 3           | Tuesday   | Jan 21, 2025 | Worksheet 1: Practical Applications of Train/Test Split and Cross-Validation |
 | 3           | Wednesday | Jan 22, 2025 | Group 2 Presentation: Feature Engineering and Feature Selection Methods |
