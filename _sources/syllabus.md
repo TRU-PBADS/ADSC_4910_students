@@ -1,5 +1,5 @@
 # ADSC 4910 - Applied Data Science Integrated Practice 3
-This course will provide the opportunity for students to apply and practice their data science skills by developing an end-to-end data science project. The course follows a project format, which consists of multiple milestones to help guide students in creating their data science pipeline. We will focus on the application of machine learning, data mining, and multivariate statistics for data science.
+This course will provide the opportunity for students to apply and practice their data science skills by working on practical exercises. The course consists of weekly worksheets that help reinforce students' understanding and technical know-hows. We will focus on the application of machine learning, data mining, and multivariate statistics for data science.
 
 ## Learning objectives
 
@@ -9,7 +9,7 @@ By the end of this course, students are expected be able to:
 
 ## Peer teaching
 
-In this course, each group will take turn to give a lecture on an assigned topic as well as create a practice worksheet for the whole class. The purpose of peer teaching is to help reinforce your understanding by requiring you to process and articulate the material actively. Instead of just passively listening, you will engage with the content more deeply and identify any areas where you may need clarification. By explaining concepts to others, you also reinforce your own learning and gain a better understanding of how the material fits together. 
+In this course, each group will take turn to give a lecture on an assigned topic to the whole class. The purpose of peer teaching is to help reinforce your understanding by requiring you to process and articulate the material actively. Instead of just passively listening, you will engage with the content more deeply and identify any areas where you may need clarification. By explaining concepts to others, you also reinforce your own learning and gain a better understanding of how the material fits together. 
 
 ## Schedule & office hours
 
