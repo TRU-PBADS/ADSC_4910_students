@@ -1,0 +1,711 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>ADSC 4910 - Applied Data Science Integrated Practice 3 &#8212; ADSC 4910 - Applied Data Science Integrated Practice 3</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'syllabus';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="#">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/TRU_Logo.png" class="logo__image only-light" alt="ADSC 4910 - Applied Data Science Integrated Practice 3 - Home"/>
+    <script>document.write(`<img src="_static/TRU_Logo.png" class="logo__image only-dark" alt="ADSC 4910 - Applied Data Science Integrated Practice 3 - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1 current active">
+                <a class="reference internal" href="#">
+                    ADSC 4910 - Applied Data Science Integrated Practice 3
+                </a>
+            </li>
+        </ul>
+        
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/syllabus.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>ADSC 4910 - Applied Data Science Integrated Practice 3</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-objectives">Learning objectives</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#peer-teaching">Peer teaching</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#schedule-office-hours">Schedule &amp; office hours</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#communication">Communication</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#course-schedule">Course schedule</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#assessment-overview">Assessment overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#expectations-for-the-lecture">Expectations for the lecture</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#attendance-late-assignments-academic-concessions-academic-accomodation">Attendance, late assignments, academic concessions, academic accomodation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#attendance">Attendance</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#academic-concessions">Academic concessions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#late-assignments">Late Assignments</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#accessbility">Accessbility</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="adsc-4910-applied-data-science-integrated-practice-3">
+<h1>ADSC 4910 - Applied Data Science Integrated Practice 3<a class="headerlink" href="#adsc-4910-applied-data-science-integrated-practice-3" title="Link to this heading">#</a></h1>
+<p>This course will provide the opportunity for students to apply and practice their data science skills by developing an end-to-end data science project. The course follows a project format, which consists of multiple milestones to help guide students in creating their data science pipeline. We will focus on the application of machine learning, data mining, and multivariate statistics for data science.</p>
+<section id="learning-objectives">
+<h2>Learning objectives<a class="headerlink" href="#learning-objectives" title="Link to this heading">#</a></h2>
+<p>By the end of this course, students are expected be able to:</p>
+<ul class="simple">
+<li><p>Understand and apply the fundamentals of supervised machine learning covering concepts such as: train/test split, cross validation, feature engineering, feature selection, hyperparameter optimization, and model evaluation.</p></li>
+<li><p>Understand and apply basic deep learning techniques such as: neural networks, activation functions, backpropagation, optimization, RNN, CNN, transformers</p></li>
+</ul>
+</section>
+<section id="peer-teaching">
+<h2>Peer teaching<a class="headerlink" href="#peer-teaching" title="Link to this heading">#</a></h2>
+<p>In this course, each group will take turn to give a lecture on an assigned topic as well as create a practice worksheet for the whole class. The purpose of peer teaching is to help reinforce your understanding by requiring you to process and articulate the material actively. Instead of just passively listening, you will engage with the content more deeply and identify any areas where you may need clarification. By explaining concepts to others, you also reinforce your own learning and gain a better understanding of how the material fits together.</p>
+</section>
+<section id="schedule-office-hours">
+<h2>Schedule &amp; office hours<a class="headerlink" href="#schedule-office-hours" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Tuesday 16:00 - 17:15, OM 1241</p></li>
+<li><p>Wednesday 9:30 - 10:15, IB 1015</p></li>
+</ul>
+<p>Office hour: Wed 11:30 AM-12:30 PM at OM 1232</p>
+</section>
+<section id="communication">
+<h2>Communication<a class="headerlink" href="#communication" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>For any <strong>course-related questions</strong>, such as lectures, assignments, exames, course logistics, please ask them under the discussion forum in Moodle.</p></li>
+<li><p>For any <strong>individual-related questions</strong>, such as academic concession, deadline extension, personal circumstances, etc., please email me at lnguyen[at]tru[dot]ca</p></li>
+<li><p><strong>Response time</strong>: I will try our best to reply to your inquiries as soon as possible during the normal working hours (9AM-5PM Mon-Fri). If you send me a message outside of regular working hours, please expect a response on the next working day.</p></li>
+</ul>
+</section>
+<section id="course-schedule">
+<h2>Course schedule<a class="headerlink" href="#course-schedule" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Week Number</p></th>
+<th class="head"><p>Weekday</p></th>
+<th class="head"><p>Date</p></th>
+<th class="head"><p>Topic</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>Tuesday</p></td>
+<td><p>Jan 7, 2025</p></td>
+<td><p>Course Introduction: Overview, Objectives, and Expectations</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>Wednesday</p></td>
+<td><p>Jan 8, 2025</p></td>
+<td><p>Group Formation and Introduction to Team-Based Learning</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>Tuesday</p></td>
+<td><p>Jan 14, 2025</p></td>
+<td><p>Group Project Preparation</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>Wednesday</p></td>
+<td><p>Jan 15, 2025</p></td>
+<td><p>Group 1 Presentation: Train/Test Split and Cross-Validation Techniques</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>Tuesday</p></td>
+<td><p>Jan 21, 2025</p></td>
+<td><p>Worksheet 1: Practical Applications of Train/Test Split and Cross-Validation</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>Wednesday</p></td>
+<td><p>Jan 22, 2025</p></td>
+<td><p>Group 2 Presentation: Feature Engineering and Feature Selection Methods</p></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td><p>Tuesday</p></td>
+<td><p>Jan 28, 2025</p></td>
+<td><p>Worksheet 2: Implementing Feature Engineering and Selection</p></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p>Wednesday</p></td>
+<td><p>Jan 29, 2025</p></td>
+<td><p>Group 3 Presentation: Overview of KNN, Logistic Regression, Linear Regression, SVM, and Random Forest</p></td>
+</tr>
+<tr class="row-even"><td><p>5</p></td>
+<td><p>Tuesday</p></td>
+<td><p>Feb 4, 2025</p></td>
+<td><p>Worksheet 3: Applying Various Classification and Regression Models</p></td>
+</tr>
+<tr class="row-odd"><td><p>5</p></td>
+<td><p>Wednesday</p></td>
+<td><p>Feb 5, 2025</p></td>
+<td><p>Group 4 Presentation: Hyperparameter Optimization and Model Evaluation Strategies</p></td>
+</tr>
+<tr class="row-even"><td><p>6</p></td>
+<td><p>Tuesday</p></td>
+<td><p>Feb 11, 2025</p></td>
+<td><p>Worksheet 4: Techniques for Hyperparameter Tuning and Model Assessment</p></td>
+</tr>
+<tr class="row-odd"><td><p>6</p></td>
+<td><p>Wednesday</p></td>
+<td><p>Feb 12, 2025</p></td>
+<td><p>Group 5 Presentation: Introduction to Neural Networks</p></td>
+</tr>
+<tr class="row-even"><td><p>7</p></td>
+<td><p>Tuesday</p></td>
+<td><p>Feb 18, 2025</p></td>
+<td><p>READING BREAK (No Class)</p></td>
+</tr>
+<tr class="row-odd"><td><p>7</p></td>
+<td><p>Wednesday</p></td>
+<td><p>Feb 19, 2025</p></td>
+<td><p>READING BREAK (No Class)</p></td>
+</tr>
+<tr class="row-even"><td><p>8</p></td>
+<td><p>Tuesday</p></td>
+<td><p>Feb 25, 2025</p></td>
+<td><p>Worksheet 5: Basics of Neural Networks Implementation</p></td>
+</tr>
+<tr class="row-odd"><td><p>8</p></td>
+<td><p>Wednesday</p></td>
+<td><p>Feb 26, 2025</p></td>
+<td><p>Group 6 Presentation: Activation Functions and Backpropagation Mechanism</p></td>
+</tr>
+<tr class="row-even"><td><p>9</p></td>
+<td><p>Tuesday</p></td>
+<td><p>Mar 4, 2025</p></td>
+<td><p>Worksheet 6: Building Neural Networks with Activation Functions</p></td>
+</tr>
+<tr class="row-odd"><td><p>9</p></td>
+<td><p>Wednesday</p></td>
+<td><p>Mar 5, 2025</p></td>
+<td><p>Group 7 Presentation: Optimization Techniques in Deep Learning</p></td>
+</tr>
+<tr class="row-even"><td><p>10</p></td>
+<td><p>Tuesday</p></td>
+<td><p>Mar 11, 2025</p></td>
+<td><p>Worksheet 7: Practical Optimization in Neural Network Training</p></td>
+</tr>
+<tr class="row-odd"><td><p>10</p></td>
+<td><p>Wednesday</p></td>
+<td><p>Mar 12, 2025</p></td>
+<td><p>Group 8 Presentation: Introduction to Recurrent Neural Networks (RNNs)</p></td>
+</tr>
+<tr class="row-even"><td><p>11</p></td>
+<td><p>Tuesday</p></td>
+<td><p>Mar 18, 2025</p></td>
+<td><p>Worksheet 8: Hands-on with RNNs for Sequential Data</p></td>
+</tr>
+<tr class="row-odd"><td><p>11</p></td>
+<td><p>Wednesday</p></td>
+<td><p>Mar 19, 2025</p></td>
+<td><p>Group 9 Presentation: Convolutional Neural Networks (CNNs) for Image Data</p></td>
+</tr>
+<tr class="row-even"><td><p>12</p></td>
+<td><p>Tuesday</p></td>
+<td><p>Mar 25, 2025</p></td>
+<td><p>Worksheet 9: Practical Applications of CNNs</p></td>
+</tr>
+<tr class="row-odd"><td><p>12</p></td>
+<td><p>Wednesday</p></td>
+<td><p>Mar 26, 2025</p></td>
+<td><p>Group 10 Presentation: Introduction to Transformers and Attention Mechanisms</p></td>
+</tr>
+<tr class="row-even"><td><p>13</p></td>
+<td><p>Tuesday</p></td>
+<td><p>Apr 1, 2025</p></td>
+<td><p>Worksheet 10: Exploring Transformers in Modern AI Applications</p></td>
+</tr>
+<tr class="row-odd"><td><p>13</p></td>
+<td><p>Wednesday</p></td>
+<td><p>Apr 2, 2025</p></td>
+<td><p>Course Wrap-Up: Summary, Reflections, and Next Steps</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="assessment-overview">
+<h2>Assessment overview<a class="headerlink" href="#assessment-overview" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Assessment component</p></th>
+<th class="head"><p>Weight</p></th>
+<th class="head"><p>Deadline</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Teamwork contract</p></td>
+<td><p>N/A</p></td>
+<td><p>Jan 14, 2025, 11:59 PM</p></td>
+</tr>
+<tr class="row-odd"><td><p>Attendance</p></td>
+<td><p>10%</p></td>
+<td><p>N/A</p></td>
+</tr>
+<tr class="row-even"><td><p>Lecture quality</p></td>
+<td><p>20%</p></td>
+<td><p>Before the lecture that you are in charge of</p></td>
+</tr>
+<tr class="row-odd"><td><p>Worksheet (7% each x 10)</p></td>
+<td><p>70%</p></td>
+<td><p>Every Tuesday’s midnight</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="expectations-for-the-lecture">
+<h2>Expectations for the lecture<a class="headerlink" href="#expectations-for-the-lecture" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Each lecture should be within 75 minutes</p></li>
+<li><p>The lecture should have clear learning objectives</p></li>
+<li><p>The lecture should have at least 3 active learning activities (e.g., a short discussion activity, a poll, a small in-class exercise). The purpose of these activities is to help students actively engage with the learning materials instead of just passively listening.</p></li>
+</ul>
+</section>
+<section id="attendance-late-assignments-academic-concessions-academic-accomodation">
+<h2>Attendance, late assignments, academic concessions, academic accomodation<a class="headerlink" href="#attendance-late-assignments-academic-concessions-academic-accomodation" title="Link to this heading">#</a></h2>
+<section id="attendance">
+<h3>Attendance<a class="headerlink" href="#attendance" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>We will take attendance during the first 5 minutes of each class.</p></li>
+<li><p><strong>If you are late more than 5 minutes, it will be counted as absent</strong>.</p></li>
+<li><p>Attendance will account up to 10% of the course total grade.</p></li>
+<li><p>You are <strong>allowed to miss 3 classes</strong> without incurring any penalty.</p></li>
+</ul>
+<p>Please refer to <a class="reference external" href="https://www.tru.ca/__shared/assets/Policy_ED_03-135351.pdf">TRU’s attendance policy</a>. In addition, we will take attendance during class via Moodle’s QR code</p>
+</section>
+<section id="academic-concessions">
+<h3>Academic concessions<a class="headerlink" href="#academic-concessions" title="Link to this heading">#</a></h3>
+<p>If you encounter situations that may impede your ability to meet course requirements—such as illness, family emergencies, or other significant life events—please notify the instructor <strong>at least 24 hours before deadline</strong>. Academic concessions, including extensions or alternative assessments, will be considered on a case-by-case basis. You may be required to provide documentation to support your request. Concession requests after the deadline has passed will likely be refused.</p>
+</section>
+<section id="late-assignments">
+<h3>Late Assignments<a class="headerlink" href="#late-assignments" title="Link to this heading">#</a></h3>
+<p>Assignments are expected to be submitted on time. Late submissions will incur a penalty of 25% per day, up to a maximum of 75%. After 3 days, late assignments will no longer be accepted and will receive a grade of zero. Extensions may be granted in exceptional circumstances, provided that you contact the instructor before the deadline.</p>
+</section>
+<section id="accessbility">
+<h3>Accessbility<a class="headerlink" href="#accessbility" title="Link to this heading">#</a></h3>
+<p>Students registered with the Accessibility Services who require accommodations must provide their Letter of Accommodation to the instructor as soon as possible. This letter will outline the necessary accommodations to ensure an equitable learning environment. Please ensure that this is done early in the term to facilitate timely arrangements.</p>
+</section>
+</section>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-objectives">Learning objectives</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#peer-teaching">Peer teaching</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#schedule-office-hours">Schedule &amp; office hours</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#communication">Communication</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#course-schedule">Course schedule</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#assessment-overview">Assessment overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#expectations-for-the-lecture">Expectations for the lecture</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#attendance-late-assignments-academic-concessions-academic-accomodation">Attendance, late assignments, academic concessions, academic accomodation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#attendance">Attendance</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#academic-concessions">Academic concessions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#late-assignments">Late Assignments</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#accessbility">Accessbility</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Quan Nguyen
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
