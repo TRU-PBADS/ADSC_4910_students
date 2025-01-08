@@ -1,4 +1,4 @@
-# Teamwork Contract Template for Capstone Project
+# Teamwork Contract Template for group presentation
 
 **Project Title**: ______________________________________________  
 **Team Name**: ______________________________________________  
