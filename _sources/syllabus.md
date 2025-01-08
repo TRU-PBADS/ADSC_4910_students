@@ -16,7 +16,7 @@ In this course, each group will take turn to give a lecture on an assigned topic
 - Tuesday 16:00 - 17:15, OM 1241
 - Wednesday 9:30 - 10:15, IB 1015
 
-Office hour: Wed 11:30 AM-12:30 PM at OM 1232
+Office hour: Wed 10:30 AM-11:30 PM at OM 1232
 
 ## Communication
 - For any **course-related questions**, such as lectures, assignments, exames, course logistics, please ask them under the discussion forum in Moodle.
